@@ -5,7 +5,8 @@ setup(
     version='0.1',
     packages=find_packages(),
     install_requires=[
-        # Add your library dependencies here
+        'WatchUI',
+        'openpyxl'
     ],
     author='Sonam Bindal',
     author_email='youremail@example.com',
@@ -14,9 +15,9 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/shailucareer/ImageComparator.git',
     classifiers=[
-        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.12.1',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.6',
+    python_requires='=3.12.1',
 )
