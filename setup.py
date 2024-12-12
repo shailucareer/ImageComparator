@@ -15,9 +15,9 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/shailucareer/ImageComparator.git',
     classifiers=[
-        'Programming Language :: Python :: 3.12.1',
+        'Programming Language :: Python :: 3.12',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.12',
+    python_requires='>=3.6',
 )
