@@ -1,6 +1,8 @@
-
+from _ast import keyword
 
 import pandas as pd
+from robot.api.deco import not_keyword
+
 
 class ExcelFileHandler:
 
@@ -11,6 +13,8 @@ class ExcelFileHandler:
         self.sheet_name = 0
 
     ''' pass the sheet_index(starts with 0), or pass sheet_name'''
+
+    @not_keyword
     def _read_file(self, file_path, sheet_name_index):
         self.file_path = file_path
         self.sheet_name=sheet_name_index
@@ -23,6 +27,7 @@ class ExcelFileHandler:
             raise ValueError("Invalid file type, Only xls, xlsx and csv are files are supported")
         return self.data
 
+    @not_keyword
     def _write_to_file(self, data, to_file_path):
         if self.file_type in ['xls', 'xlsx']:
             data.to_excel(to_file_path, index=False)
@@ -31,6 +36,7 @@ class ExcelFileHandler:
         else:
             raise ValueError("Invalid file type. Only xls, xlsx and csv files are supported.")
 
+    @keyword
     def get_column_count(self, file_path,sheet_name, row_index):
         if self.data is None:
             self._read_file(file_path, sheet_name)
@@ -38,6 +44,7 @@ class ExcelFileHandler:
         row_data = self.data.iloc[int(row_index)]
         return len(row_data)
 
+    @keyword
     def get_row_count(self, file_path, sheet_name):
         if self.data is None:
             self._read_file(file_path, sheet_name)
@@ -45,6 +52,8 @@ class ExcelFileHandler:
         return len(self.data)
 
     ''' row_index, col_index starts with 0'''
+
+    @keyword
     def get_cell_value(self, file_path, sheet_name, row_index, col_index):
         if self.data is None:
             self._read_file(file_path, sheet_name)
@@ -53,6 +62,8 @@ class ExcelFileHandler:
         return "" if pd.isna(value) else value
 
     ''' row_index, col_index starts with 0'''
+
+    @keyword
     def set_cell_value(self,file_path, sheet_name, row_index, col_index, value):
         if self.data is None:
             self._read_file(file_path, sheet_name)
