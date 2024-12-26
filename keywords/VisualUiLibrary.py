@@ -2,6 +2,8 @@ from .BrowserManager import BrowserManager
 from .CustomHtmlReportGenerator import CustomHtmlReportGenerator
 from .ExcelFileHandler import ExcelFileHandler
 from .ImageManager import ImageManager
+from robot.api.deco import keyword, not_keyword
+
 
 class VisualUiLibrary(BrowserManager, CustomHtmlReportGenerator, ExcelFileHandler, ImageManager):
     def __init__(self):
@@ -11,24 +13,30 @@ class VisualUiLibrary(BrowserManager, CustomHtmlReportGenerator, ExcelFileHandle
         ExcelFileHandler.__init__(self)
         ImageManager.__init__(self)
 
+
+    @keyword
     def get_image_dimensions(self, image1_path, image2_path):
         print("Get Image Dimensions")
 
+    @keyword
     def compare_images(self, image1_path, image2_path):
         """Compare two images and return the similarity score."""
         # Example method to compare images
         print("compare_images(self, image1_path, image2_path)")
 
+    @keyword
     def generate_report(self, comparison_results):
         """Generate a report based on the comparison results."""
         # Example method to generate a report
         print("generate_report(self, comparison_results)")
 
+    @keyword
     def save_results_to_excel(self, results, file_path):
         """Save the comparison results to an Excel file."""
         # Example method to save results to an Excel file
         print("save_results_to_excel(self, results, file_path)")
 
+    @keyword
     def calculate_similarity(self, image1_path, image2_path):
         """A placeholder method to calculate image similarity."""
         # This method should be implemented with actual image comparison logic
