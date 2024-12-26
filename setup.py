@@ -5,8 +5,6 @@ setup(
     version='0.1',
     packages=find_packages(),
     install_requires=[
-        'WatchUI',
-        'openpyxl'
     ],
     author='Sonam Bindal',
     author_email='youremail@example.com',
