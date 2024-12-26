@@ -3,5 +3,8 @@ from .util  import BrowserManager, CustomHtmlReportGenerator, ExcelFileHandler, 
 
 class ImageComparator(BrowserManager,CustomHtmlReportGenerator,ExcelFileHandler,ImageManager):
     def __init__(self):
-        super().__init__()
+        BrowserManager.__init__(self)
+        CustomHtmlReportGenerator.__init__(self)
+        ExcelFileHandler.__init__(self)
+        ImageManager.__init__(self)
 
