@@ -1,7 +1,7 @@
 import os
 import time
-from ImageComparator.util.img.Image_HighlightDifference_PIL import Image_HighlightDifference_PIL
-from ImageComparator.util.img.Image_HighlightDifference_WatchUI import Image_HighlightDifference_WatchUI
+from ImageComparator.Image_HighlightDifference_PIL import Image_HighlightDifference_PIL
+from ImageComparator.Image_HighlightDifference_WatchUI import Image_HighlightDifference_WatchUI
 from CustomHtmlReportGenerator import CustomHtmlReportGenerator
 from robot.api.deco import keyword, not_keyword
 from ImageComparator.IBasic import IBasic
