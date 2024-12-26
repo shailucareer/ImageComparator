@@ -6,10 +6,12 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from robot.libraries.BuiltIn import BuiltIn
-import time
+
+
+from ImageComparator.IBasic import IBasic
 from CustomHtmlReportGenerator import CustomHtmlReportGenerator
 
-class BrowserManager:
+class BrowserManager(IBasic):
     def __init__(self):
         self.driver = None
         self.report = CustomHtmlReportGenerator()

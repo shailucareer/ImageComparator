@@ -3,9 +3,10 @@ import os
 import time
 
 from robot.api.deco import not_keyword
+from ImageComparator.IBasic import IBasic
 
 
-class Image_HighlightDifference_PIL:
+class Image_HighlightDifference_PIL(IBasic):
     def __init__(self, out_image_dir):
         self.out_image_dir = out_image_dir
 

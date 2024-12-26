@@ -3,9 +3,10 @@ import os
 import time
 
 from robot.api.deco import not_keyword
+from ImageComparator.IBasic import IBasic
 
 
-class Image_HighlightDifference_WatchUI:
+class Image_HighlightDifference_WatchUI(IBasic):
     def __init__(self, comparison_output_dir):
         self.comparison_output_dir = comparison_output_dir
         self.watch_ui = WatchUI()

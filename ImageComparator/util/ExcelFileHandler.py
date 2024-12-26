@@ -2,9 +2,10 @@ from _ast import keyword
 
 import pandas as pd
 from robot.api.deco import not_keyword
+from ImageComparator.IBasic import IBasic
 
 
-class ExcelFileHandler:
+class ExcelFileHandler(IBasic):
 
     def __init__(self):
         self.file_path = None

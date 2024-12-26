@@ -4,9 +4,10 @@ from ImageComparator.util.img.Image_HighlightDifference_PIL import Image_Highlig
 from ImageComparator.util.img.Image_HighlightDifference_WatchUI import Image_HighlightDifference_WatchUI
 from CustomHtmlReportGenerator import CustomHtmlReportGenerator
 from robot.api.deco import keyword, not_keyword
+from ImageComparator.IBasic import IBasic
 
 
-class ImageManager:
+class ImageManager(IBasic):
     def __init__(self):
         self.comparison_output_dir = "output/comparison_output"
         self.img_compare_watchui = Image_HighlightDifference_WatchUI(self.comparison_output_dir)

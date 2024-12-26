@@ -3,8 +3,10 @@ import shutil
 from collections import defaultdict
 from robot.libraries.BuiltIn import BuiltIn
 from robot.api.deco import keyword, not_keyword
+from ImageComparator.IBasic import IBasic
 
-class CustomHtmlReportGenerator:
+
+class CustomHtmlReportGenerator(IBasic):
 
     TEST_RESULT = defaultdict(list)
     def __init__(self):
